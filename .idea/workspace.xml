@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae25578f-2946-447e-9f68-ab3d7911ab31" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" afterPath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" />
     </list>
     <ignored path="test-cart.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,10 +45,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="line_items_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="line_items_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/line_items_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.7972973">
+            <state line="79" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="line_items_controller_test.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/controllers/line_items_controller_test.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="48" selection-start="815" selection-end="815" vertical-scroll-proportion="0.5439189">
               <folding />
             </state>
           </provider>
@@ -81,7 +89,6 @@
         <option value="$PROJECT_DIR$/app/controllers/concerns/current_cart.rb" />
         <option value="$PROJECT_DIR$/app/models/product.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/store.css.scss" />
-        <option value="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" />
         <option value="$PROJECT_DIR$/app/views/store/index.html.erb" />
         <option value="$PROJECT_DIR$/db/migrate/20130712133451_add_quantity_to_line_items.rb" />
         <option value="$PROJECT_DIR$/app/models/cart.rb" />
@@ -89,6 +96,7 @@
         <option value="$PROJECT_DIR$/db/migrate/20130712134539_combine_items_in_cart.rb" />
         <option value="$PROJECT_DIR$/app/controllers/carts_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/line_items_controller.rb" />
+        <option value="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" />
       </list>
     </option>
   </component>
@@ -848,13 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/controllers/line_items_controller_test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="59" selection-start="528" selection-end="528" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/store_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="36" selection-start="94" selection-end="94" vertical-scroll-proportion="0.05272408">
@@ -927,7 +928,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/line_items_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.7972973">
+        <state line="79" column="0" selection-start="2057" selection-end="2057" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/controllers/line_items_controller_test.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="48" selection-start="815" selection-end="815" vertical-scroll-proportion="0.5439189">
           <folding />
         </state>
       </provider>
