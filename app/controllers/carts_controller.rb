@@ -55,9 +55,11 @@ class CartsController < ApplicationController
   # DELETE /carts/1
   # DELETE /carts/1.json
   def destroy
+    #@todo: users should only be able to delete their own carts
     @cart.destroy
+    session[:cart_id] = nil
     respond_to do |format|
-      format.html { redirect_to carts_url }
+      format.html { redirect_to store_url, notice: 'Your cart has been emptied' }
       format.json { head :no_content }
     end
   end
