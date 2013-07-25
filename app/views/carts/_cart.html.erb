@@ -1,5 +1,13 @@
-<h2>Your Cart</h2>
+<h4 class="subheader">Your Cart</h4>
 <table>
+  <thead>
+  <tr>
+    <th width="200">Quantity</th>
+    <th>Product</th>
+    <th width="150">Price</th>
+    <th></th>
+  </tr>
+  </thead>
     <%= render(cart.line_items) %>
         <tr class="total_line">
             <td colspan="2">Total</td>

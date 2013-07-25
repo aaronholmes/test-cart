@@ -1,35 +1,84 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Pragprog Books Online Store</title>
-  <%= stylesheet_link_tag "application", media: "all",
-                          "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+  <head>
+  	<meta charset="utf-8" />
+
+  	<!-- Uncomment to make IE8 render like IE7 -->
+  	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  	<!-- Set the viewport width to device width for mobile -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  	<title><%= content_for?(:title) ? yield(:title) : "Test App" %></title>
+
+    <%= stylesheet_link_tag "application", media: "all",
+                            "data-turbolinks-track" => true %>
+  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
 <body class="<%= controller.controller_name %>">
-<div id="banner">
-  <%= image_tag("logo.png") %>
-  <%= @page_title || "Pragmatic Bookshelf" %>
-</div>
-<div id="columns">
-  <div id="side">
-    <div id="cart">
-      <% if @cart %>
-        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-          <%= render @cart %>
-        <% end %>
-      <% end %>
-    </div>
-    <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li> <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+
+<nav class="top-bar hide-for-small">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      <h1><a href="/">Rails 4 Test Application (with Foundation!)</a></h1>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="divider"></li>
+      <li><a href="/grid.php">Home</a></li>
+      <li class="divider"></li>
+      <li><a href="/templates.php">Blog</a></li>
+      <li class="divider"></li>
+      <li><a href="/case-jacquelinewest.php">Contact</a></li>
+      <li class="has-form">
+        <a href="http://foundation.zurb.com/docs" class="button">Login</a>
+      </li>
     </ul>
-  </div>
-  <div id="main">
-    <%= yield %>
+  </section>
+</nav>
+
+<div class="row">
+  <div id="banner" class="large-12 columns">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
 </div>
+<div class="row">
+  <div class="large-4 columns">
+    <div id="side">
+      <div id="cart">
+        <% if @cart %>
+            <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+                <%= render @cart %>
+            <% end %>
+        <% end %>
+      </div>
+      <ul class="side-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Signin</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="large-8 columns">
+    <div id="main" class="large-9 columns">
+      <%= yield %>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "application" %>
 </body>
 </html>
